@@ -139,7 +139,6 @@ class NickNamer(commands.Cog):
                                 except:
                                     pass
 
-    @checks.mod()
     @commands.command()
     @checks.bot_has_permissions(manage_nicknames=True)
     async def nick(self, ctx, user: discord.Member, *, reason: Optional[str]):
@@ -174,7 +173,6 @@ class NickNamer(commands.Cog):
                 _("Missing permissions.")
             )  # can remove this as the check is made on invoke with the decorator
 
-    @checks.mod()
     @commands.command()
     @checks.bot_has_permissions(manage_nicknames=True)
     async def cnick(self, ctx, user: discord.Member, nickname: str, *, reason: Optional[str]):
@@ -279,7 +277,6 @@ class NickNamer(commands.Cog):
                         except:
                             pass
 
-    @checks.mod()
     @commands.command()
     @checks.bot_has_permissions(manage_nicknames=True)
     async def tempnick(
